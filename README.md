@@ -1,8 +1,11 @@
+
 # KeepNote Application - Final Integration
 
 ## Problem Statement
 
 Build the KeepNote application with Angular as the frontend using APIs developed through Spring Boot.
+Angular Step 3 and Spring step 6 code can be reused and enhanced for this Step.
+
 
 ## Requirements:
 
@@ -33,6 +36,7 @@ Build the KeepNote application with Angular as the frontend using APIs developed
 10. Dockerize the frontend and Backend (create/reuse dockerfile, docker-compose.yml and get it executed through docker compose)
 
 ### Note: 
-Code should be checkedin to a **NEW**  gitlab repo and shared with the mentor before the Final demo (UI and code walkthrough). You should **NOT** push your final code into the existing Angular step3 and Spring step 6 repos.
+
+Completed Code should be checkedin to a **NEW**  gitlab repo and shared with the mentor before the Final demo (UI and code walkthrough). You should **NOT** push your final code into the existing Angular step3 and Spring step 6 repos.
 
 
