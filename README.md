@@ -9,7 +9,7 @@ Angular Step 3 and Spring step 6 code can be reused and enhanced for this Step.
 
 ## Requirements:
 
-1. On launching the application the user should get the login page. The login page should have a link for registration using which the user should be able to register. On successful registration the user should be taken to the login page. Upon login, the user should be taken to the Note Dashboard page.
+1. On launching the application the user should get the login page. The login page should have a link for registration using which the user should be able to register. Registration page should have password and confirm password fields. Passwords should be at least 6 character with atleast one upper,lower,number and special symbol. On successful registration the user should be taken to the login page. Upon login, the user should be taken to the Note Dashboard page.
     - Proper navigation links for all the pages should be available within pages.
     - Error handling should be implemented across pages. Appropriate messages should be displayed for the same. Success messages should be displayed for all the create,update and Delete operations
     - Logout feature should be implemented.
