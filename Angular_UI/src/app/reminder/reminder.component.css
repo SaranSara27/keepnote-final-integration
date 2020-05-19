@@ -1,0 +1,61 @@
+.note-reminder {
+    padding: 15px;
+    font-family: "Open sans";
+}
+
+.note-reminder .error-message {
+    color: #f00;
+    font-size: 0.85em;
+}
+
+.note-reminder mat-form-field {
+    display: block;
+    width: 25%;
+    margin-bottom: 10px;
+}
+
+.note-reminder .button-section {
+    margin-top: 20px;
+}
+
+.note-reminder .button-section .cancel-button {
+    margin-left:50px;
+}
+
+.note-reminder .available-reminders {
+    margin: 30px 0px 20px;
+    border: 1px solid #ccc;
+    padding: 20px 20px;
+    border-radius: 6px;
+}
+
+.note-reminder .available-reminders .title {
+    font-family: "Open sans";
+    font-size: 1.5em;
+    border-bottom: 1px solid #88544e;
+    padding-bottom: 10px;
+}
+
+.note-reminder .available-reminders li {
+    font-size: 0.95em;
+    margin-bottom : 15px;
+    overflow:auto;
+}
+
+.note-reminder .available-reminders li button{
+   float:right;
+}
+
+
+.note-reminder .delete-reminder {
+    font-size: 0.9em;
+    color: blue;
+    margin-left: 15px;
+    cursor: pointer;
+}
+.note-reminder .update-reminder {
+    font-size: 0.9em;
+    color: blue;
+    margin-left: 20px;
+    cursor: pointer;
+}

@@ -1,0 +1,95 @@
+mongodb:
+-------
+
+sudo service mongod status
+
+sudo service mongod start
+
+sudo service mongod stop
+
+
+User Table:
+-----------
+
+CREATE TABLE User (
+  userId VARCHAR(45) NOT NULL primary key,
+  firstName VARCHAR(45) NOT NULL ,
+lastName VARCHAR(45) NOT NULL ,
+userPassword VARCHAR(45),
+userRole VARCHAR(15),
+  userAddedDate DATE
+  );
+
+INSERT INTO User VALUES('101','Saranya','Selvaraj','root','admin','2020-05-17');
+INSERT INTO User VALUES('102','Root','Testing','root','user','2020-05-17');
+
+================================================================================
+
+
+User Authentication:
+-------------------
+http://localhost:8089/api/v1/auth/register   -- POST
+
+{
+"userId":"101",
+"firstName":"Saranya",
+"lastName":"Selvaraj",
+"userPassword" : "root",
+"userRole":"admin",
+"userAddedDate":"2020-05-17"
+}
+
+http://localhost:8089/api/v1/auth/login   -- POST
+{
+"userId":"101",
+"userPassword" : "root"
+}
+
+
+
+Category:
+http://localhost:8080/api/v1/category
+
+{
+"id":"101",
+"categoryName" : "Important",
+"categoryDescription":"Test"
+}
+
+http://localhost:8081/api/v1/reminder
+
+{
+"reminderId":"101",
+"reminderName" : "Important",
+"reminderDescription":"Test",
+"reminderType":"Repeat"
+}
+
+Application.yml(User auth):
+--------------------------
+
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/keepnote
+    username: root
+    password: root
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+    show-sql: true
+server:
+  port: 8089
+
+
+=================================================================================
+
+Access to XMLHttpRequest at 'http://localhost:8089/api/v1/auth/login' from origin 
+'http://localhost:4200' has been blocked by CORS policy: Response to preflight 
+request doesn't pass access control check: No 'Access-Control-Allow-Origin' header is present on the requested resource.
+zone.js:3243 POST http://localhost:8089/api/v1/auth/login net::ERR_FAILED
+
+
+

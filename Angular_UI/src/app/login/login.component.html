@@ -1,0 +1,33 @@
+<div class="login-page">
+      <div class="login-form">
+            <p *ngIf="submitMessage">
+               <strong class="error-message">{{submitMessage}}</strong>
+            </p>
+   
+            <form (ngSubmit)="loginSubmit()" novalidate>
+                  <h3>Sign In</h3>
+                  <div class="input-field">
+                     <mat-form-field>
+                        <input class="username" matInput placeholder="User Name" [formControl] = 'username' required autocomplete="off">
+                        <mat-error *ngIf="username.invalid">{{get_username_error()}}</mat-error>
+                     </mat-form-field>
+                  </div>
+                   
+                  <div class="input-field">
+                     <mat-form-field>
+                        <input class="password" type="password" matInput placeholder="Password" [formControl]='password' required autocomplete="off">
+                        <mat-error *ngIf="password.invalid">{{get_password_error()}}</mat-error> 
+                     </mat-form-field>
+                  </div>
+                   
+                  <div class="button-section">
+                     <button mat-raised-button color="primary" type="submit">Submit</button>
+                  </div>
+   
+                  <p>
+                     <a [routerLink]="['/registration']">New User - Register Here</a>
+                  </p>
+            </form>
+      </div>
+   
+   </div>

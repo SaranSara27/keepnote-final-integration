@@ -1,0 +1,69 @@
+<!-- Expansion panel to add new notes -->
+<div class="keep-comp-note-taker-pannel app-note-taker">
+    <mat-expansion-panel>
+        <mat-expansion-panel-header>
+            <mat-panel-title>
+                Take a note
+            </mat-panel-title>
+        </mat-expansion-panel-header>
+        <div class="keep-comp-note-taker-wapper">
+            <!-- Label to display any error messages -->
+            <label *ngIf="errMessage" class="error-message">{{ errMessage }}</label>
+
+            <form novalidate #noteTakerForm="ngForm" (ngSubmit)="takeNote()">
+                <!-- Note fields -->
+                <mat-form-field>
+                    <input name="title" required [(ngModel)] = 'note.noteTitle'  matInput placeholder="Title" type = 'text'>
+                </mat-form-field>
+                <mat-form-field>
+                    <textarea name="text" required [(ngModel)] = 'note.noteContent' matInput placeholder="Text"></textarea>
+                </mat-form-field>
+                <mat-form-field>
+                    <mat-select name="state" required placeholder="Select state" [(ngModel)]="note.noteStatus">
+                        <mat-option *ngFor="let state of states" [value]="state">
+                        {{ state }}
+                        </mat-option>
+                    </mat-select>
+                </mat-form-field>
+
+                <!-- Reminder Fields -->
+
+                <mat-form-field>
+                    <mat-select name="reminderName" required placeholder="Select Reminder" [(ngModel)]="selectedReminder">
+                        <mat-option value="">Select</mat-option>
+                        <mat-option *ngFor="let reminder of reminderList" [value]="reminder">
+                            {{ reminder.reminderName }}
+                        </mat-option>
+                    </mat-select>
+                </mat-form-field>
+               
+
+                <!-- Category fields -->
+                <mat-form-field>
+                    <mat-select name="categoryName" required placeholder="Select Category" [(ngModel)]="selectedCategory">
+                        <mat-option value="">Select</mat-option>
+                        <mat-option *ngFor="let category of categoryList" [value]="category">
+                            {{ category.categoryName }}
+                        </mat-option>
+                    </mat-select>
+                </mat-form-field>
+
+                <div class="selected-reminder" *ngIf="selectedReminder">
+                    <p>{{selectedReminder.reminderName}} - {{selectedReminder.reminderType}} ({{selectedReminder.reminderDescription}})</p>
+                </div>
+
+                <div class="selected-category" *ngIf="selectedCategory">
+                    <p>{{selectedCategory.categoryName}} ({{selectedCategory.categoryDescription}})</p>
+                </div>
+
+                <div class="keep-comp-button row">
+                    <button type="submit" mat-raised-button color="primary">Done</button>
+                    <button mat-raised-button color="primary" class="navigation-button" type="button" [routerLink]="['/category']">Create Category</button>
+                    <button mat-raised-button color="primary" class="navigation-button" type="button" [routerLink]="['/reminder']">Create Reminder</button>
+                </div>
+
+            
+            </form>
+        </div>
+      </mat-expansion-panel>
+</div> 

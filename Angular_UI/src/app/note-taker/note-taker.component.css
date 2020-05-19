@@ -1,0 +1,27 @@
+.app-note-taker mat-form-field {
+    width: 30%;
+    margin-right: 15px;
+}
+
+.app-note-taker .error-message {
+    color: #f00;
+}
+
+.app-note-taker .selected-reminder {
+    margin: 15px 0px;
+}
+
+.app-note-taker .selected-category {
+    margin: 15px 0px;
+}
+
+.app-note-taker .keep-comp-button {
+    margin: 15px 0px;
+}
+
+.app-note-taker .navigation-button {
+    margin-left: 40px;
+    float:right;   
+    
+
+}

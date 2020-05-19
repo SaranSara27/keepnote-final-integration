@@ -1,0 +1,21 @@
+::ng-deep .mat-input-wrapper  {
+    margin-right: 20px;
+}
+
+.edit-note-view mat-form-field {
+    width: 31%;
+    margin-right: 10px;
+    font-size: 0.95em;
+}
+
+.edit-note-view .error-message {
+    color: #f00;
+    margin-bottom: 10px;
+}
+
+.edit-note-view .navigation-button{
+    margin-left:15px;
+}
+.closeModel{
+    text-align: right;
+}

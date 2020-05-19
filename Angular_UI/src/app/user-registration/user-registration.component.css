@@ -1,0 +1,38 @@
+.user-registration {
+    padding: 15px;
+    font-family: "Open sans";
+}
+
+.user-registration .error-message {
+    color: #f00;
+    font-size: 0.85em;
+}
+
+.user-registration mat-form-field {
+    display: block;
+    width: 25%;
+    margin-bottom: 10px;
+}
+
+.user-registration .button-section {
+    margin-top: 20px;
+}
+
+.user-registration .button-section .cancel-button {
+    margin-left: 5%;
+}
+
+.alert{
+    position: relative;
+    padding: .75rem 1.25rem;
+    margin-bottom: 1rem;
+    border: 1px solid transparent;
+    border-radius: .25rem;
+    font-size: 0.85em;
+}
+
+.alert-success {
+    color: #155724;
+    background-color: #d4edda;
+    border-color: #c3e6cb;
+}

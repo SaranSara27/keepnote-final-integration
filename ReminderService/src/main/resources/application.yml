@@ -1,0 +1,30 @@
+spring:
+  data:
+    mongodb: 
+      database: categoryDb
+      port: 27017
+      host: localhost
+  application:
+    name: reminder-service
+
+server:
+  port: 8081
+
+
+
+
+#
+#spring:
+#  data:
+#    mongodb:
+# #     authentication-database:
+#      username: chandan
+#      password: root
+#      database: reminderDb
+#      port: 27017
+#      host: localhost
+#  application:
+#    name: reminder-service
+#
+#server:
+#  port: 8081

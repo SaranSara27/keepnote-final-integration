@@ -1,0 +1,37 @@
+<div class="note-category">
+    <h3>Note Category</h3>
+
+    <p *ngIf="errorMessage" class="error-message">
+      <strong>{{errorMessage}}</strong>
+    </p>
+
+    <form [formGroup]="categoryForm">
+        <mat-form-field>
+            <input type="text" name="categoryName" matInput formControlName="categoryName" placeholder="Name" autocomplete="off">
+            <mat-error *ngIf="categoryForm.get('categoryName').invalid">Name is required.</mat-error>
+        </mat-form-field>
+
+        <mat-form-field>
+            <input type="text" name="categoryDescription" matInput formControlName="categoryDescription" placeholder="Description" autocomplete="off">
+            <mat-error *ngIf="categoryForm.get('categoryDescription').invalid">Description is required.</mat-error>
+        </mat-form-field>
+
+        <div class="button-section">
+            <button mat-raised-button mat-primary color="primary" type="button" (click)="categoryEditId ? updateCategory(categoryForm) : createCategory(categoryForm)">Submit</button>
+            <button mat-raised-button mat-primary color="primary" class="cancel-button" type="button" [routerLink]="['/dashboard']">Cancel</button>
+        </div>
+    </form>
+
+    <div class="available-categories" *ngIf="categoryList && categoryList.length">
+      <div class="title">Available Categories</div>
+
+      <ul>
+        <li *ngFor="let category of categoryList">
+          {{category.categoryName}} ({{category.categoryDescription}})
+          <button mat-stroked-button  class="delete-category" (click)="deleteCategory(category)">Delete Category</button>
+          <button mat-stroked-button  class="update-category" (click)="editCategory(category)">Edit Category</button>
+        </li>
+      </ul>
+    </div>
+
+</div>

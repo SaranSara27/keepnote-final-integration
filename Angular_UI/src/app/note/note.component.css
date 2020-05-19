@@ -1,0 +1,25 @@
+.keep-c-note {
+    margin-right: 10px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    width:220px;
+    background-color: #ddd;
+}
+
+.keep-c-note .note-status{
+    padding: 2px;
+    border-radius: 4px;
+    color: #fff;
+}
+
+.keep-c-note .not-started {
+    background-color: #f00;
+}
+
+.keep-c-note .started {
+    background-color: orange;
+}
+
+.keep-c-note .completed {
+    background-color: green;
+}

@@ -1,0 +1,7 @@
+<mat-card class = 'keep-c-note' (click) = 'OpenEditNoteView()'>
+  <mat-card-title>{{note.noteTitle}}</mat-card-title>
+  <mat-card-content>
+    <p>{{note.noteContent}}</p>
+    <div class="note-status" [ngClass]="note.noteStatus">{{noteStatusMap[note.noteStatus]}}</div>
+  </mat-card-content>
+</mat-card>

@@ -1,0 +1,11 @@
+.keep-c-list-container{
+    padding : 30px;
+    display : flex;
+    flex-wrap : wrap; 
+}
+
+.keep-c-list-container label {
+    width: 100%;
+    margin-bottom: 20px;
+    font-weight: bold;
+}

@@ -1,0 +1,60 @@
+<div class="edit-note-view">
+  <!-- Label to display any error messages -->
+  <div class="error-message">
+      <strong>{{ errMessage }}</strong>
+  </div>
+<div class="closeModel">
+<span  (click)="onClose()">X</span>
+</div>
+  <!-- Note fields -->
+  <mat-form-field> 
+    <input [(ngModel)]="note.noteTitle" name="editTitle" matInput placeholder="Title" type="text">
+  </mat-form-field>
+
+  <mat-form-field>
+    <textarea [(ngModel)]="note.noteContent" name="editText" matInput placeholder="Text"></textarea>
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-select name="editStatus" placeholder="Select state" [(ngModel)]="note.noteStatus">
+      <mat-option *ngFor="let state of states" [value]="state">
+        {{ state }}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+
+   <!-- Reminder Fields -->
+
+   <mat-form-field>
+        <mat-select name="reminderName" required placeholder="Select Reminder" [(ngModel)]="selectedReminder">
+            <mat-option value="">Select</mat-option>
+            <mat-option *ngFor="let reminder of reminderList" [value]="reminder">
+                {{ reminder.reminderName }}
+            </mat-option>
+        </mat-select>
+    </mat-form-field>
+
+    <!-- Category fields -->
+    <mat-form-field>
+        <mat-select name="categoryName" required placeholder="Select Category" [(ngModel)]="selectedCategory">
+            <mat-option value="">Select</mat-option>
+            <mat-option *ngFor="let category of categoryList" [value]="category">
+                {{ category.categoryName }}
+            </mat-option>
+        </mat-select>
+    </mat-form-field>
+
+    <div class="selected-reminder" *ngIf="selectedReminder">
+        <p>{{selectedReminder.reminderName}} - {{selectedReminder.reminderType}} ({{selectedReminder.reminderDescription}})</p>
+    </div>
+
+    <div class="selected-category" *ngIf="selectedCategory">
+        <p>{{selectedCategory.categoryName}} ({{selectedCategory.categoryDescription}})</p>
+    </div>
+
+  <div class="keep-c-done-wrapper">
+    <button mat-raised-button color="primary" (click)="onSave()">Save</button>
+   <!--  <button mat-raised-button class="navigation-button" type="button" [routerLink]="['/reminder']">Create Reminder</button>
+    <button mat-raised-button class="navigation-button" type="button" [routerLink]="['/category']">Create Category</button> -->
+  </div>
+</div>
