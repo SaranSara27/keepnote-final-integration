@@ -1,0 +1,5 @@
+.category-form-container{
+    width:30vw;
+    display: flex;
+    flex-direction: column;
+}

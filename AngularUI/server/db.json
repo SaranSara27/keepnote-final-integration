@@ -1,0 +1,52 @@
+{
+  "notes": [
+    {
+      "id": 1,
+      "title": "Read Angular5  ",
+      "text": "Shall do at 6 pm",
+      "state": "completed"
+    },
+    {
+      "id": 2,
+      "title": "Call Divy completed",
+      "text": "Track the new submissions",
+      "state": "started"
+    },
+    {
+      "title": "Capitalism",
+      "text": "Mark Twain",
+      "id": 3,
+      "state": "completed"
+    },
+    {
+      "title": "call note",
+      "text": "call text",
+      "state": "completed",
+      "id": 4
+    },
+    {
+      "title": "divytitle",
+      "text": "divytext",
+      "state": "not-started",
+      "id": 5
+    },
+    {
+      "title": "12414",
+      "text": "245645",
+      "state": "not-started",
+      "id": 6
+    },
+    {
+      "title": "sdfsfgsdg",
+      "text": "sfyeryey",
+      "state": "not-started",
+      "id": 7
+    },
+    {
+      "title": "Meeting Note1",
+      "text": "Meeting Text1",
+      "state": "not-started",
+      "id": 8
+    }
+  ]
+}

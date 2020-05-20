@@ -1,0 +1,30 @@
+.signup-form-container{
+    width:80vw;
+    margin:10vh auto;  
+}
+h2{
+    text-align: center;
+    padding: 2vh;
+    font-size: 1.5em;
+    margin-bottom: 0;
+    margin-top: 0;
+} 
+.signup-form{
+    padding: 1em;
+}
+.validation-error{
+    font-size:0.8em;
+    color:red;
+    font-weight: 500;
+}
+.jumbotron{
+    background-color: rgb(159, 184, 175);
+    text-align: center;
+    padding: 0.5em;
+}
+.user-message,.jumbotron, .validation-error {
+    font-family: 'Montserrat', sans-serif;
+}
+.backlogin-css{
+    text-align: end;
+}

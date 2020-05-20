@@ -1,0 +1,17 @@
+<!-- Label to display any error messages -->
+<label class="error-message">{{ errMessage }}</label>
+<div class="note-form-container">
+    <mat-form-field> 
+      <input  name="Name" matInput placeholder="Name"  [(ngModel)] = "reminder.reminderName" >
+    </mat-form-field>
+    <mat-form-field>
+      <textarea  name="Desc" matInput placeholder="Desc" [(ngModel)] = "reminder.reminderDescription" ></textarea>
+    </mat-form-field>
+    <mat-form-field>
+      <textarea  name="Type" matInput placeholder="Type" [(ngModel)] = "reminder.reminderType" ></textarea>
+    </mat-form-field>
+    
+</div>    
+<div class="keep-c-done-wrapper">
+  <button mat-button (click)="editReminder()">Save</button>
+</div>

@@ -1,0 +1,11 @@
+.keep-c-note-container{
+    flex-direction: row;
+    width: 80vw;
+    margin:10vh auto;
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.note-card{
+    margin:1em;
+}

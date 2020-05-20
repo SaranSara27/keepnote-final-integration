@@ -1,0 +1,6 @@
+<div class="keep-c-note-container">
+		<h3>{{errorMessage}}</h3> 
+	<!-- Include the notes collection with each note rendered as a separate NoteComponent -->
+	<app-note [note]="note" *ngFor="let note of notes" class="note-card"></app-note>
+</div>
+  

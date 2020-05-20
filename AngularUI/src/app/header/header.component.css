@@ -1,0 +1,16 @@
+.keep-c-toggle-view {
+	width: 100%;
+	margin-left: 93%;
+	cursor: pointer;
+}
+.header-color{
+    background-color: mediumslateblue;
+}
+
+.signout{
+    float: left;
+}
+
+.side-nav{
+    position: absolute;
+}

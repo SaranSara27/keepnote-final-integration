@@ -1,0 +1,35 @@
+
+<div class="login-form-container">
+    <mat-card class="center">
+
+    <h2 class="form-header">Login Form</h2>
+  
+    <!-- Login Form Using Reactive Forms Module -->
+    <mat-card-content>
+        <form class="login-form" action="" (submit)="loginSubmit()">
+    <mat-form-field>
+        <input matInput placeholder="Enter Username" [formControl]="username" class="username">
+        <mat-error *ngIf="username.hasError('required') && username.touched">Enter Username</mat-error>
+        <mat-error *ngIf="username.hasError('minlength') && username.touched">UserName must be min 6 characters</mat-error>
+        </mat-form-field>
+  
+        <mat-form-field>
+        <input matInput type="password" placeholder="Enter Password" [formControl]="password" class="password">
+        <mat-error *ngIf="password.hasError('required') && password.touched">Enter Password</mat-error>
+        <mat-error *ngIf="password.hasError('minlength') && password.touched">Password must be min 6 characters</mat-error>
+        </mat-form-field>
+  
+        <div class="center-button">
+        <button mat-button class="button-css">Submit</button><br/>
+    </div>
+      <h6 class="error-message">{{this.submitMessage}}</h6>
+   </form>
+   <br>
+   <h5 class="signup">New User - SignUp</h5>
+  <div class="signup-css">
+    
+    <button mat-button class="signup-button-css" (click) = "userSignup()">Create Account</button>
+  </div>
+  </mat-card-content>
+  </mat-card> 
+  </div>

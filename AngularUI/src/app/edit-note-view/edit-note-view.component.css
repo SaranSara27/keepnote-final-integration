@@ -1,0 +1,9 @@
+.container{
+    width:60vw;
+    display: flex;
+    flex-direction: column;
+}
+.keep-c-done-wrapper{
+    display: flex;
+    flex-direction: column;
+}

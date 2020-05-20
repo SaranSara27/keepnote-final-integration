@@ -1,0 +1,38 @@
+<!-- HeaderComponent to be displayed as part of AppComponent -->
+<app-header></app-header>
+
+<button mat-button [matMenuTriggerFor]="menu"><mat-icon class="maticon">menu</mat-icon>Menu</button>
+<mat-menu #menu="matMenu">
+
+      <button class="note" mat-menu-item (click)="getNotesView()">
+            <mat-icon class="maticon">note</mat-icon>
+            Notes &nbsp;
+      </button>
+      <mat-divider></mat-divider>
+      <button class="note" mat-menu-item (click)="getNotesReminderView()">
+            <mat-icon class="maticon">alarm</mat-icon>Reminder Notes
+      </button>
+      <mat-divider></mat-divider>
+      <button class="category" mat-button (click)="loadCategories()"></button>
+      <button class="category" mat-button (click)="addCategory()">
+            <mat-icon class="maticon">category</mat-icon>
+            &nbsp;&nbsp;&nbsp;Add Category &nbsp;
+      </button>
+      <mat-divider></mat-divider>
+      <app-category matInput [category]="category" *ngFor="let category of categories"></app-category>
+      <mat-divider></mat-divider>
+      <button class="category" mat-button (click)="loadReminders()"></button>
+      <button class="category" mat-button (click)="addReminder()">
+            <mat-icon class="maticon">alarm_add</mat-icon>
+            &nbsp;&nbsp;&nbsp;Add Reminder &nbsp;
+      </button>
+      <mat-divider></mat-divider>
+      <app-reminder [reminder]="reminder" *ngFor="let reminder of reminders"></app-reminder>
+      <mat-divider></mat-divider>
+      <br>
+      <br>
+      <button class="signout" mat-button>
+            <a href="#" onclick="window.localStorage.clear()">Signout</a>
+      </button>
+</mat-menu>
+<router-outlet></router-outlet>

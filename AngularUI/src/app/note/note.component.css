@@ -1,0 +1,28 @@
+.note-card{
+    min-width: 30vh;
+    min-height: 35vh;
+    margin:1em;
+    border-radius: .45rem;
+  }
+  .card-text, h3, mat-card-title, .category, .reminder {
+    font-family: 'Montserrat', sans-serif;
+}
+.reminder{
+    text-align: center;
+    color: cadetblue;
+    font-size: 1em;
+}
+.category{
+  font-size: 1em;
+  color:black;
+}
+
+.mytitle{
+  color: firebrick;
+}
+
+
+.menu-menu{
+  float: right;
+  
+}

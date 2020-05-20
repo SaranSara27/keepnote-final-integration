@@ -1,0 +1,17 @@
+.menu{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5em;
+    outline: 0;
+}
+.note{
+    width: 15em;
+    outline: 0;
+}
+
+.category{
+    float: left;
+}
+
+.reminderadd{
+    float: left;
+}

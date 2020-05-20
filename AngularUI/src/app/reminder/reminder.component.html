@@ -1,0 +1,14 @@
+<div class="reminder">
+    
+<mat-list-item class = "reminder-item">
+ {{reminder.reminderName}}
+<button class ="edit" mat-button (click)="editReminder()"> 
+<mat-icon class = "maticon">edit</mat-icon>
+</button>
+<button class ="delete" mat-button (click)="deleteReminder()"> 
+  <mat-icon class = "maticon" >delete</mat-icon>
+  </button>
+
+</mat-list-item>
+</div>
+

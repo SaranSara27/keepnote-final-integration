@@ -1,0 +1,36 @@
+.note-expansion-panel-container{
+    display: flex;
+    flex-direction: column;
+    width:60vw;
+    margin:10vh auto;
+  }
+
+
+#notes{
+    color: blue;
+}
+
+  
+.note-form-container{
+    display: flex;
+    flex-direction: column;
+}
+
+.notes-card-container{
+    width:70vw;
+    margin:10vh 20vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;  
+
+}
+.card{
+    height:50vh;
+    width:20vw;
+    margin:1em;
+}
+.button-css{
+    margin: auto;
+    display: block;
+    background-color: tomato;
+}

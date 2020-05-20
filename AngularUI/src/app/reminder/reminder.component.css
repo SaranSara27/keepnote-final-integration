@@ -1,0 +1,25 @@
+/* .reminderbutton, .edit{
+    width: 5vw;
+    overflow: hidden;  
+} */
+.reminderbutton{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1em;
+}
+
+.display-category{
+    display: flex;
+}
+
+.delete{
+    width: 20px;
+    font-size: 10px;
+    
+    float: right;
+}
+
+.reminder{
+    float: left;
+    white-space: normal;
+    
+}

@@ -1,0 +1,19 @@
+<table>
+  <tbody>
+    <mat-list-item class = "category-item">
+      <tr>
+      <td><mat-icon class = "maticon">label</mat-icon></td>
+        
+      <td> <button class ="categorybutton" mat-button  (click)="getNotesByCategory(category.categoryName)">  {{category.categoryName}}  </button>
+    </td> 
+    <td> <button class ="edit" mat-button (click)="editCategory()"> 
+      <mat-icon class = "maticon">edit</mat-icon>
+      </button></td>
+      
+      <td><button class ="delete" mat-button (click)="deleteCategory()"> 
+      <mat-icon class = "maticon" >delete</mat-icon>
+      </button></td>
+    </tr>
+    </mat-list-item>
+  </tbody>
+</table>

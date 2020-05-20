@@ -1,0 +1,13 @@
+.notes-card-container{
+    display: flex;
+    flex-direction: row;
+    width: 80vw;
+    margin:0%;
+    flex-flow: row wrap;
+ }
+ .keep-c-list-container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin:1em;
+}

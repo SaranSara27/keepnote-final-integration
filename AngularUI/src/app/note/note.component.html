@@ -1,0 +1,24 @@
+<div class="note-card-css">
+    <mat-card class="note-card">
+        <mat-card-content class="card-content" (click)="routeToEditNoteView()">
+            <h2 class="mytitle">{{note.noteTitle}}</h2>
+            <p>Desc: {{note.noteContent}}</p>
+            <p>Status: {{note.noteStatus}}</p>
+            <p>Category: {{category.categoryName}}<p>
+        </mat-card-content>
+        <mat-card-footer>
+            <button mat-icon-button class="menu-menu" [matMenuTriggerFor]="menu">
+                <mat-icon>more_vert</mat-icon>
+            </button>
+            <mat-menu #menu="matMenu">
+                <button mat-menu-item (click)="deleteNote()">
+                    <span>Delete note</span>
+                </button>
+            </mat-menu>
+            &nbsp;&nbsp;
+            <div *ngFor="let str of reminderNames">
+                <h4 class="reminder">{{str}}</h4>
+            </div>
+        </mat-card-footer>
+    </mat-card>
+</div>

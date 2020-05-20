@@ -1,0 +1,62 @@
+<div class="signup-form-container">
+  <h2> Signup Form</h2>
+  <form class="signup-form" #signUpForm="ngForm" (ngSubmit)="signUpUser(signUpForm)">
+      <div class="form-group">
+        <label for="inputUserId">User Id</label>
+        <input type="text" class="form-control" id="inputUserId" [(ngModel)]="user.userId" name="userId" aria-describedby="userIdHelp" placeholder="Enter User ID" required minlength="6" #userId="ngModel">
+        <small *ngIf="userId?.touched && userId.errors?.required" class="validation-error">UserId is Required</small>
+        <small *ngIf="userId?.touched && userId.errors?.minlength" class="validation-error">UserId must be min 6 characters</small>
+      </div>
+      
+      <div class="form-group">
+        <label for="inputPassword">Password</label>
+        <input type="password" class="form-control" id="inputPassword" name="userPassword" placeholder="Enter Password" [(ngModel)]="user.userPassword" required minlength="6" #userPassword="ngModel">
+        <small *ngIf="password?.touched && password.errors?.required" class="validation-error">Password is Required</small>
+        <small *ngIf="password?.touched && password.errors?.minlength" class="validation-error">Password must be min 6 characters</small>
+      </div>
+      
+      <div class="form-group">
+        <label for="inputFirstname">First Name</label>
+        <input type="text" class="form-control" id="inputFirstname" [(ngModel)]="user.firstName" name="firstName" aria-describedby="firstNameHelp" placeholder="Enter First Name" required minlength="3" #firstName="ngModel">
+        <small *ngIf="firstName?.touched && firstName.errors?.required" class="validation-error">firstName is Required</small>
+        <small *ngIf="firstName?.touched && firstName.errors?.minlength" class="validation-error">firstName must be min 3 characters</small>
+      </div>
+    
+      <div class="form-group">
+        <label for="inputLastname">Last Name</label>
+        <input type="text" class="form-control" id="inputLastname" [(ngModel)]="user.lastName" name="lastName" aria-describedby="lastNameHelp" placeholder="Enter Last Name" required minlength="3" #lastName="ngModel">
+        <small *ngIf="lastName?.touched && lastName.errors?.required" class="validation-error">lastName is Required</small>
+        <small *ngIf="lastName?.touched && lastName.errors?.minlength" class="validation-error">lastName must be min 3 characters</small>
+      </div>
+    
+       <div class="form-group">
+        <label for="selectUserRole">User Role</label><br>
+        <input type="radio" name="gender" value="user">User<br>
+<input type="radio" name="gender" value="guest">Guest<br>
+<input type="radio" name="gender" value="developer">Developer
+        <small *ngIf="userRole?.touched && userRole.errors?.required" class="validation-error">User Role is Required</small>
+     
+      </div>
+    
+      <div class="form-group">
+        <label for="inputuserMobile">Mobile Number</label>
+        <input type="text" class="form-control" id="inputuserMobile" [(ngModel)]="user.userMobile" name="userMobile" aria-describedby="userMobileHelp" placeholder="Enter Mobile Number" required minlength="10" #userMobile="ngModel">
+        <small *ngIf="userMobile?.touched && userMobile.errors?.required" class="validation-error">Mobile No is Required</small>
+        <small *ngIf="userMobile?.touched && userMobile.errors?.minlength" class="validation-error">Mobile No must be minimum 10 digits</small>
+      </div>
+    
+    
+      <div class="form-group form-check">
+        <input type="checkbox" class="form-check-input" id="tCcheck" [(ngModel)]="user.isChecked" name="isChecked" required #isChecked="ngModel">
+        <label class="form-check-label" for="tCcheck">Agree Terms & Conditions</label>
+        <small *ngIf="isChecked?.touched && isChecked.errors?.required" class="validation-error"> You must accept our terms & conditions</small>
+    
+      </div>
+      <button type="submit" class="btn btn-primary" >Submit</button>
+  </form>
+      <div class="backlogin-css">
+        <a href="http://localhost:4200/login"><button mat-button class="btn btn-primary" >Go Back To Login</button></a>
+        <h6 class="user-message">{{this.submitMessage}}</h6>
+      </div>
+</div>
+

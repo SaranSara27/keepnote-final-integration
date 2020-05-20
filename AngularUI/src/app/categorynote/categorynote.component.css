@@ -1,0 +1,7 @@
+.keep-c-note-container{
+    width:70vw;
+    margin:10vh 20vw;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}

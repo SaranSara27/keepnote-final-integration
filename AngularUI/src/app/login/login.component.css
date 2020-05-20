@@ -1,0 +1,48 @@
+div.login-form-container{
+    display: flex;
+    flex-direction: column;
+    width:100vw;
+    margin:10vw auto;
+    height: 30%;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-form{
+    display: flex;
+    flex-direction: column;
+}
+.login-card{
+    height: 30%;  
+    justify-content: center;
+    align-items: center;
+}
+.center{
+    width: 30%;
+    margin: 10px auto;
+}
+.form-header{
+    text-align: center;
+}
+
+.button-css{
+    background-color: mediumslateblue;
+    width: 30%;
+   
+}
+
+.center-button{
+    text-align: center;
+}
+
+.signup-button-css{
+    text-align: right;
+    background-color: mediumslateblue;
+    width: 100%;
+    text-align: center;
+}
+
+.signup{
+    text-align: center;
+}
+
