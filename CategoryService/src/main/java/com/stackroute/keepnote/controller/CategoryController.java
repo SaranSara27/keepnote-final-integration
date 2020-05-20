@@ -37,7 +37,7 @@ import com.stackroute.keepnote.service.CategoryService;
  * format. Starting from Spring 4 and above, we can use @RestController annotation which 
  * is equivalent to using @Controller and @ResposeBody annotation
  */
-@CrossOrigin("*")
+@CrossOrigin
 @RestController
 public class CategoryController {
 	
@@ -152,7 +152,7 @@ public class CategoryController {
 	 * This handler method should map to the URL "/api/v1/category" using HTTP GET method
 	 */
 	@GetMapping("/api/v1/category")
-	public ResponseEntity<?> getAllCategoryByUserId(@PathVariable("userId") String userId,HttpServletRequest request) {
+	public ResponseEntity<?> getAllCategoryByUserId(HttpServletRequest request) {
 		HttpHeaders headers = new HttpHeaders();
 		try {
 				List<Category>  categoryList = service.getAllCategory();
