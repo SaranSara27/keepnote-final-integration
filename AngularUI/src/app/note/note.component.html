@@ -5,6 +5,10 @@
             <p>Desc: {{note.noteContent}}</p>
             <p>Status: {{note.noteStatus}}</p>
             <p>Category: {{category.categoryName}}<p>
+            <p>Reminders: <p>
+                <div *ngFor="let str of reminderNames">
+                    <h4 class="reminder">{{str}}</h4>
+                </div>
         </mat-card-content>
         <mat-card-footer>
             <button mat-icon-button class="menu-menu" [matMenuTriggerFor]="menu">
@@ -16,9 +20,9 @@
                 </button>
             </mat-menu>
             &nbsp;&nbsp;
-            <div *ngFor="let str of reminderNames">
-                <h4 class="reminder">{{str}}</h4>
-            </div>
+            <br>
+            &nbsp;&nbsp;
+            <br>
         </mat-card-footer>
     </mat-card>
 </div>

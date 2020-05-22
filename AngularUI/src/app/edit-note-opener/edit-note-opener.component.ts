@@ -16,9 +16,8 @@ export class EditNoteOpenerComponent implements OnInit {
   constructor(private activatedRoute: ActivatedRoute,
     public dialog: MatDialog,
     private noteService: NotesService,
-    private router: RouterService) {}
-  ngOnInit() {
-    this.activatedRoute.params.subscribe(params => this.noteId = params.noteid);
+    private router: RouterService) {
+      this.activatedRoute.params.subscribe(params => this.noteId = params.noteid);
     console.log('noteid for edit', this.noteId);
     this.note = this.noteService.getNoteById(parseInt(this.noteId, 10));
     console.log('this.note:', this.note);
@@ -27,5 +26,8 @@ export class EditNoteOpenerComponent implements OnInit {
     }).afterClosed().subscribe(result => {
       this.router.routeToDashboard();
     });
+    }
+  ngOnInit() {
+    
   }
 }
