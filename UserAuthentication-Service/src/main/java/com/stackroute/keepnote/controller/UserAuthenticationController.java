@@ -69,10 +69,9 @@ public class UserAuthenticationController {
 	@ApiOperation(value = "Create User")
 	@PostMapping("/api/v1/auth/register")
 	public ResponseEntity<User> createUser(@RequestBody User user) {
-		/*boolean isCreated = false;*/
 		ResponseEntity<User> result = null;
 		try {
-			/*isCreated = */userAuthenticationService.saveUser(user);
+			userAuthenticationService.saveUser(user);
 			result = new ResponseEntity<User>(user, HttpStatus.CREATED);
 		} catch (UserAlreadyExistsException e) {
 			System.out.println("UserAlreadyExistsException : User Already Exists");

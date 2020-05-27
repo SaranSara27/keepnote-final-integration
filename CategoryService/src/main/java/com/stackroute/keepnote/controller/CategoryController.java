@@ -65,15 +65,11 @@ public class CategoryController {
 	@PostMapping(value="/api/v1/category")
 	public ResponseEntity<Category> createCategory(@RequestBody Category category) {
 		
-		/*String loggedInUserId = (String) session.getAttribute("loggedInUserId");
-		if(loggedInUserId!=null) {
-			category.setCategoryCreatedBy(loggedInUserId);*/
 		
 			Category c=null;
 			try {
 				c = categoryService.createCategory(category);
 			} catch (CategoryNotCreatedException e) {
-				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
 			 if(c!=null) {                        
@@ -82,10 +78,6 @@ public class CategoryController {
                  return new ResponseEntity<Category>(HttpStatus.CONFLICT);
              }
 			 
-		/*}else {
-         return new ResponseEntity<Category>(HttpStatus.UNAUTHORIZED);
-		}*/
-		
 	}
 	
 	/*
@@ -108,7 +100,6 @@ public class CategoryController {
 		try {
 			flag = categoryService.deleteCategory(id);
 		} catch (CategoryDoesNoteExistsException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		 if(flag) {                        
@@ -132,10 +123,6 @@ public class CategoryController {
 	@ApiOperation(value="UpdateCategory")
 	@PutMapping("/api/v1/category/{id}")
     public ResponseEntity<Category> updateCategory(@PathVariable("id") String id ,@RequestBody Category category) {
-		/*try {
-            if (session.getAttribute("loggedInUserId")==null) 
-                return new ResponseEntity<Category>( HttpStatus.UNAUTHORIZED);
-            }*/
 			
             Category categoryUpdate = categoryService.updateCategory(category, id);
             if (categoryUpdate != null)
@@ -143,12 +130,6 @@ public class CategoryController {
             else
                 return new ResponseEntity<Category>(HttpStatus.CONFLICT);
             
-        /*} catch (NullPointerException e) {
-            return new ResponseEntity<Category>( HttpStatus.UNAUTHORIZED);
-        } catch (Exception e) {
-            return new ResponseEntity<Category>( HttpStatus.NOT_FOUND);
-        } */
-        
     }
 	
 	/*
@@ -161,17 +142,6 @@ public class CategoryController {
 	 * This handler method should map to the URL "/api/v1/category" using HTTP GET method
 	 */
 	
-	/*@GetMapping("/api/v1/category")
-    public ResponseEntity<List<Category>> categoryById(HttpSession session) {
-        String loggedInUserId= (String) session.getAttribute("loggedInUserId");
-        if(loggedInUserId==null) {
-            return new ResponseEntity<List<Category>>(HttpStatus.UNAUTHORIZED);
-        }
-        
-        List<Category> list = categoryService.getAllCategoryByUserId(loggedInUserId);
-        return new ResponseEntity<List<Category>>(list,HttpStatus.OK);
-    }*/
-	
 	@ApiOperation(value="Get categoryById ")
 	@GetMapping("/api/v1/category/{id}")
     public ResponseEntity<Category> categoryById(@PathVariable("id") String id) {
@@ -181,7 +151,6 @@ public class CategoryController {
 		try {
 			category = categoryService.getCategoryById(id);
 		} catch (CategoryNotFoundException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		if(category!=null) {
